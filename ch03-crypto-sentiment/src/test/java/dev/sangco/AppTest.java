@@ -7,8 +7,10 @@ import dev.sangco.language.DummyClient;
 import dev.sangco.serialization.Tweet;
 import dev.sangco.serialization.json.TweetSerdes;
 import com.mitchseymour.kafka.serialization.avro.AvroSerdes;
+
 import java.util.List;
 import java.util.Properties;
+
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.TestInputTopic;
@@ -21,12 +23,12 @@ import org.junit.jupiter.api.Test;
 
 class AppTest {
 
-      private TopologyTestDriver testDriver;
-      private TestInputTopic<byte[], Tweet> inputTopic;
-      private TestOutputTopic<byte[], EntitySentiment> outputTopic;
+    private TopologyTestDriver testDriver;
+    private TestInputTopic<byte[], Tweet> inputTopic;
+    private TestOutputTopic<byte[], EntitySentiment> outputTopic;
 
-      @BeforeEach
-      void setup() {
+    @BeforeEach
+    void setup() {
         // build the topology with a dummy client
         Topology topology = CryptoTopology.build(new DummyClient(), false);
 
@@ -38,19 +40,19 @@ class AppTest {
 
         // create the test input topic
         inputTopic =
-            testDriver.createInputTopic(
-                "tweets", Serdes.ByteArray().serializer(), new TweetSerdes().serializer());
+                testDriver.createInputTopic(
+                        "tweets", Serdes.ByteArray().serializer(), new TweetSerdes().serializer());
 
         // create the test output topic
         outputTopic =
-            testDriver.createOutputTopic(
-                "crypto-sentiment",
-                Serdes.ByteArray().deserializer(),
-                AvroSerdes.get(EntitySentiment.class).deserializer());
-      }
+                testDriver.createOutputTopic(
+                        "crypto-sentiment",
+                        Serdes.ByteArray().deserializer(),
+                        AvroSerdes.get(EntitySentiment.class).deserializer());
+    }
 
-      @Test
-      void sentimentEnrichment() {
+    @Test
+    void sentimentEnrichment() {
         Tweet tweet = new Tweet();
         tweet.setCreatedAt(System.currentTimeMillis());
         tweet.setId(123L);
@@ -58,7 +60,7 @@ class AppTest {
         tweet.setRetweet(false);
         tweet.setText("this shaky stock market has rekindled interest in both bitcoin and ethereum");
 
-        inputTopic.pipeInput(new byte[] {}, tweet);
+        inputTopic.pipeInput(new byte[]{}, tweet);
 
         assertThat(outputTopic.isEmpty()).isFalse();
 
@@ -75,6 +77,6 @@ class AppTest {
         assertThat(record2.getEntity()).isEqualTo("ethereum");
         assertThat(record2.getSentimentScore()).isBetween(0.0, 1.0);
         assertThat(record2.getSentimentMagnitude()).isBetween(0.0, 1.0);
-      }
+    }
 
 }

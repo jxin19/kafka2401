@@ -19,21 +19,21 @@ public class DummyClient implements LanguageClient {
     public List<EntitySentiment> getEntitySentiment(Tweet tweet) {
         List<EntitySentiment> results = new ArrayList<>();
 
-    Iterable<String> words = Splitter.on(' ').split(tweet.getText().toLowerCase().replace("#", ""));
-    for (String entity : words) {
-      EntitySentiment entitySentiment =
-          EntitySentiment.newBuilder()
-              .setCreatedAt(tweet.getCreatedAt())
-              .setId(tweet.getId())
-              .setEntity(entity)
-              .setText(tweet.getText())
-              .setSalience(randomDouble())
-              .setSentimentScore(randomDouble())
-              .setSentimentMagnitude(randomDouble())
-              .build();
+        Iterable<String> words = Splitter.on(' ').split(tweet.getText().toLowerCase().replace("#", ""));
+        for (String entity : words) {
+            EntitySentiment entitySentiment =
+                    EntitySentiment.newBuilder()
+                            .setCreatedAt(tweet.getCreatedAt())
+                            .setId(tweet.getId())
+                            .setEntity(entity)
+                            .setText(tweet.getText())
+                            .setSalience(randomDouble())
+                            .setSentimentScore(randomDouble())
+                            .setSentimentMagnitude(randomDouble())
+                            .build();
 
-      results.add(entitySentiment);
-    }
+            results.add(entitySentiment);
+        }
 
         return results;
     }
