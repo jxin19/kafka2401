@@ -1,4 +1,4 @@
-package dev.sangco;
+package com.magicalpipelines;
 
 public class Main {
     public static void main(String[] args) {

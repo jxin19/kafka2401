@@ -2,7 +2,12 @@ plugins {
     id 'java'
 }
 
-group = 'dev.sangco'
+ext {
+    // https://search.maven.org/artifact/org.apache.kafka/kafka-streams
+    kafkaVersion = '2.7.0'
+}
+
+group = 'com.magicalpipelines'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -10,6 +15,9 @@ repositories {
 }
 
 dependencies {
+    implementation "org.apache.kafka:kafka-streams:${kafkaVersion}"
+    // required for JSON serializer
+    implementation 'com.google.code.gson:gson:2.8.5'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
