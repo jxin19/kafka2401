@@ -1,0 +1,9 @@
+task runDSL(type: JavaExec) {
+    mainClass = 'org.esjo.example.DslExample'
+    classpath sourceSets.main.runtimeClasspath
+}
+
+task runProcessorAPI(type: JavaExec) {
+    mainClass = 'org.esjo.example.ProcessorApiExample'
+    classpath sourceSets.main.runtimeClasspath
+}

@@ -1,0 +1,31 @@
+plugins {
+    //id 'com.commercehub.gradle.plugin.avro' version '1.7.2'
+}
+
+repositories {
+    // required for schema-registry-compatible Avro Serdes
+    maven {
+        //url "https://dl.bintray.com/gradle/gradle-plugins"
+        url "https://packages.confluent.io/maven/"
+    }
+}
+
+dependencies {
+
+    // gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+    // serdes
+    /*implementation ('io.confluent:kafka-streams-avro-serde:6.0.1') {
+        exclude group: 'org.apache.kafka', module: 'kafka-clients'
+    }*/
+    // avro
+    //implementation 'org.apache.avro:avro:1.10.1'
+    implementation 'org.apache.avro:avro:1.11.1'
+    //implementation 'com.mitchseymour:kafka-registryless-avro-serdes:1.0.0'
+
+}
+
+/*avro {
+    sourceDirectory = file("src/main/avro") // Avro 스키마 파일 위치
+    outputDirectory = file("src/main/java") // 생성된 Java 클래스 위치
+}*/

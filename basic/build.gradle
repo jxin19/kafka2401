@@ -1,0 +1,11 @@
+dependencies {
+    implementation 'org.apache.kafka:kafka-clients:3.6.1'
+}
+
+
+jar {
+    // Make sure to include all necessary resources in your JAR file
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    // You may need to include specific files/resources in your JAR, adjust this according to your project structure
+    include 'META-INF/**'
+}
