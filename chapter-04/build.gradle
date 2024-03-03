@@ -1,0 +1,100 @@
+plugins {
+    id 'application'
+
+    // https://plugins.gradle.org/plugin/com.github.sherter.google-java-format
+    id 'com.github.sherter.google-java-format' version '0.8'
+
+    // https://plugins.gradle.org/plugin/net.ltgt.errorprone
+    id 'net.ltgt.errorprone' version '0.6.1'
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.22'
+}
+
+group = 'com.example'
+sourceCompatibility = '17'
+
+ext {
+    // https://search.maven.org/artifact/org.apache.kafka/kafka-streams
+    kafkaVersion = '2.7.0'
+}
+
+application {
+    mainClassName = 'org.example.App'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    google()
+    gradlePluginPortal()
+
+    maven {
+        url "https://packages.confluent.io/maven/"
+    }
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.6.21'
+
+    implementation ('io.confluent:kafka-streams-avro-serde:6.0.1') {
+        exclude group: 'org.apache.kafka', module: 'kafka-clients'
+    }
+
+    implementation "org.apache.kafka:kafka-streams:${kafkaVersion}"
+
+    // logging
+    implementation 'org.slf4j:slf4j-api:1.7.3'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+
+    // required for custom serdes
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // required for interactive queries (server)
+    implementation 'io.javalin:javalin:3.12.0'
+    // required for interactive queries (client)
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+
+    errorprone 'com.google.errorprone:error_prone_core:2.3.2'
+    errorproneJavac 'com.google.errorprone:javac:9+181-r4173-1'
+
+}
+
+tasks.withType(JavaCompile).configureEach { javaCompile ->
+    javaCompile.dependsOn 'googleJavaFormat'
+    options.compilerArgs << "-Xlint:deprecation"
+    options.encoding = 'UTF-8'
+    options.errorprone {
+        disableWarningsInGeneratedCode = true
+        excludedPaths = '.*/build/generated/.*'
+    }
+}
+
+task runFirst(type: JavaExec) {
+    getMainClass().set('org.example.App')
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperties = [
+            'host': 'localhost',
+            'port': '7000',
+            'stateDir': '/tmp/kafka-streams'
+    ]
+}
+
+task runSecond(type: JavaExec) {
+    getMainClass().set('org.example.App')
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperties = [
+            'host': 'localhost',
+            'port': '7100',
+            'stateDir': '/tmp/kafka-streams2'
+    ]
+}
+
+run.dependsOn runFirst
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
