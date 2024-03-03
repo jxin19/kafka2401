@@ -1,19 +1,19 @@
 package com.magicalpipelines.model;
 
 public class Player {
-  private Long id;
-  private String name;
+    private Long id;
+    private String name;
 
-  public Long getId() {
-    return this.id;
-  }
+    public Long getId() {
+        return this.id;
+    }
 
-  public String getName() {
-    return this.name;
-  }
+    public String getName() {
+        return this.name;
+    }
 
-  @Override
-  public String toString() {
-    return "{" + " id='" + getId() + "'" + ", name='" + getName() + "'" + "}";
-  }
+    @Override
+    public String toString() {
+        return "{" + " id='" + getId() + "'" + ", name='" + getName() + "'" + "}";
+    }
 }

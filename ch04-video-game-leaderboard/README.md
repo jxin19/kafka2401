@@ -55,8 +55,10 @@ This application exposes the video game leaderboard results using Kafka Streams 
 
 ### Get all leaderboard entries, grouped by game (i.e. _productId_)
 
+brew install jq
+
 ```sh
-curl -s localhost:7000/leaderboard | jq '.'
+curl -s localhost:7070/leaderboard | jq '.'
 
 # example output (truncated)
 {
@@ -85,7 +87,7 @@ curl -s localhost:7000/leaderboard | jq '.'
 
 ### Get the leaderboard for a specific game (i.e. _productId_)
 ```sh
-curl -s localhost:7000/leaderboard/1 | jq '.'
+curl -s localhost:7070/leaderboard/1 | jq '.'
 
 # example output
 [
