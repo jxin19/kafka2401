@@ -1,0 +1,11 @@
+.idea/.gitignore
+.idea/aws.xml
+.idea/codeStyles
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/kafka2401.iml
+.idea/libraries/gradle_wrapper.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
