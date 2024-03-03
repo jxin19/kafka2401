@@ -33,8 +33,7 @@ class LeaderboardTopology {
 
     // register the score events stream
     KStream<String, ScoreEvent> scoreEvents =
-        builder
-            .stream("score-events", Consumed.with(Serdes.ByteArray(), JsonSerdes.ScoreEvent()))
+        builder.stream("score-events", Consumed.with(Serdes.ByteArray(), JsonSerdes.ScoreEvent()))
             // now marked for re-partitioning
             .selectKey((k, v) -> v.getPlayerId().toString());
 

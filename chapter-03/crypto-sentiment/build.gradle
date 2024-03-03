@@ -8,8 +8,8 @@ plugins {
   id 'net.ltgt.errorprone' version '0.6.1'
 
   // https://plugins.gradle.org/plugin/com.commercehub.gradle.plugin.avro
-  // id 'com.commercehub.gradle.plugin.avro' version '0.9.1'
-  id "com.github.davidmc24.gradle.plugin.avro" version "1.9.1"
+  id 'com.commercehub.gradle.plugin.avro' version '0.9.1'
+  // id "com.github.davidmc24.gradle.plugin.avro" version "1.9.1"
 }
 
 ext {
@@ -31,8 +31,8 @@ repositories {
   }
 }
 
-sourceCompatibility = JavaVersion.VERSION_21
-targetCompatibility = JavaVersion.VERSION_21
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 avro {
   fieldVisibility = 'PRIVATE'
@@ -45,20 +45,20 @@ dependencies {
   implementation 'com.google.code.gson:gson:2.8.5'
 
   // required for schema-registry-compatible Avro Serdes
-  implementation ('io.confluent:kafka-streams-avro-serde:7.6.0') {
+  implementation ('io.confluent:kafka-streams-avro-serde:6.0.1') {
     // this was required for the 2.7 upgrade, since the kafka-streams-avro-serde
     // pulls in an incompatible transitive dependency (org.apache.kafka:kafka-clients:6.0.1-ccs)
     exclude group: 'org.apache.kafka', module: 'kafka-clients'
   }
 
   // required for registryless Avro
-  implementation 'org.apache.avro:avro:1.11.3'
+  implementation 'org.apache.avro:avro:1.8.2'
   implementation 'com.mitchseymour:kafka-registryless-avro-serdes:1.0.0'
 
   // required for sentiment analysis
   implementation 'com.google.cloud:google-cloud-language:1.67.0'
 
-  implementation 'com.google.googlejavaformat:google-java-format:1.20.0'
+  //implementation 'com.google.googlejavaformat:google-java-format:1.20.0'
 
     // required for language translation
   implementation 'com.google.cloud:google-cloud-translate:1.94.5'
