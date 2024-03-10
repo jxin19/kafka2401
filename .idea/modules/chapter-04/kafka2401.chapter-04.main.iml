@@ -40,6 +40,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../chapter-04/src/main/generated" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../chapter-04/src/main/kotlin" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../chapter-04/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../chapter-04/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
