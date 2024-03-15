@@ -5,37 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="391acaac-081f-47e3-b043-55e309988056" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/chapter-05/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/data/body-temp-events.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/data/pulse-events.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/scripts/consume-alerts.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/scripts/create-topics.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/scripts/produce-test-data.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/PatientMonitoringTopology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/TimestampExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/VitalTimestampExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/WallclockTimestampExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/json/JsonDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/json/JsonSerdes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/json/JsonSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/model/BodyTemp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/model/CombinedVitals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/model/Pulse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/model/Vital.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter-06/data/patient-events.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter-06/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter-06/scripts/create-topics.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter-06/scripts/produce-test-data.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter-06/src/main/java/org/example/MyRestoreListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter-06/src/main/java/org/example/TopicConfigsExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter-06/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/chapter-04/kafka2401.chapter-04.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/chapter-04/kafka2401.chapter-04.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/chapter-04/kafka2401.chapter-04.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/chapter-04/kafka2401.chapter-04.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka2401.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/kafka2401.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kafka2401.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/kafka2401.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter-04/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter-04/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter-05/out/production/classes/org/example/PatientMonitoringTopology.class" beforeDir="false" afterPath="$PROJECT_DIR$/chapter-05/out/production/classes/org/example/PatientMonitoringTopology.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/PatientMonitoringTopology.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter-05/src/main/java/org/example/PatientMonitoringTopology.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +104,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.Main.executor": "Run",
+    "Application.TopicConfigsExample.executor": "Run",
+    "Docker.chapter-04.kafka-create-topics: Compose Deployment.executor": "Run",
+    "Docker.chapter-06.kafka-create-topics: Compose Deployment.executor": "Run",
+    "Docker.chapter-06: Compose Deployment.executor": "Run",
     "Gradle.Build kafka2401.executor": "Run",
     "Gradle.kafka2401 [runFirst].executor": "Run",
     "Gradle.kafka2401:chapter-05 [buildDependents].executor": "Run",
@@ -139,7 +125,7 @@
     "git-widget-placeholder": "lian220",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/imdoyeong/workSpaces/study/kafka2401/chapter-05/src/main/java/org/example",
+    "last_opened_file_path": "/Users/imdoyeong/workSpaces/study/kafka2401/chapter-06/src/main/resources",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -148,11 +134,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chapter-06/src/main/resources" />
+      <recent name="$PROJECT_DIR$/chapter-06" />
       <recent name="$PROJECT_DIR$/chapter-05/src/main/java/org/example" />
       <recent name="$PROJECT_DIR$/chapter-05/src/main/java" />
       <recent name="$PROJECT_DIR$/chapter-05" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/chapter-04" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/chapter-04/src/main/kotlin" />
@@ -166,10 +152,10 @@
       <recent name="model.join" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="kafka2401.chapter-05.main" />
+  <component name="RunManager" selected="Application.TombstoneExample">
+    <configuration name="TombstoneExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.TombstoneExample" />
+      <module name="kafka2401.chapter-06.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -180,75 +166,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="kafka2401:chapter-05 [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/chapter-05" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="buildDependents" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="kafka2401:chapter-05 [buildNeeded]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/chapter-05" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="buildNeeded" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="kafka2401:chapter-05 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/chapter-05" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.AppKt" />
-      <module name="kafka2401.chapter-04.main" />
+    <configuration name="TopicConfigsExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.TopicConfigsExample" />
+      <module name="kafka2401.chapter-06.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -273,13 +199,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="chapter-04.kafka-create-topics: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-create-topics" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="chapter-04/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="chapter-06: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="chapter-06/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="chapter-06.kafka-create-topics: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-create-topics" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="chapter-06/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Kotlin.AppKt" />
-        <item itemvalue="Gradle.kafka2401:chapter-05 [buildNeeded]" />
-        <item itemvalue="Gradle.kafka2401:chapter-05 [buildDependents]" />
-        <item itemvalue="Gradle.kafka2401:chapter-05 [build]" />
+        <item itemvalue="Application.TombstoneExample" />
+        <item itemvalue="Application.TopicConfigsExample" />
+        <item itemvalue="Docker.chapter-04.kafka-create-topics: Compose Deployment" />
+        <item itemvalue="Docker.chapter-06.kafka-create-topics: Compose Deployment" />
+        <item itemvalue="Docker.chapter-06: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -379,12 +343,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/chapter-05/src/main/java/org/example/PatientMonitoringTopology.java</url>
-          <line>55</line>
+          <line>59</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/chapter-05/src/main/java/org/example/PatientMonitoringTopology.java</url>
-          <line>70</line>
+          <line>74</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>

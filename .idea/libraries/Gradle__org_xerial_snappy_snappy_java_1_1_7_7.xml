@@ -2,7 +2,7 @@
   <library name="Gradle: org.xerial.snappy:snappy-java:1.1.7.7" type="java-imported" external-system-id="GRADLE">
     <properties groupId="org.xerial.snappy" artifactId="snappy-java" version="1.1.7.7" />
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/xerial/snappy/snappy-java/1.1.7.7/snappy-java-1.1.7.7.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xerial.snappy/snappy-java/1.1.7.7/43d5dbd718e6b0b1f0c8b234f2a9bb6385b8afde/snappy-java-1.1.7.7.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

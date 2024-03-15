@@ -49,8 +49,24 @@
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21" level="project" />
     <orderEntry type="library" name="Gradle: io.confluent:kafka-streams-avro-serde:6.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.kafka:kafka-streams:2.7.0" level="project" />
-    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.2.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.30" level="project" />
+    <orderEntry type="module-library">
+      <library name="Gradle: ch.qos.logback:logback-classic:1.2.3">
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Gradle: org.slf4j:slf4j-api:1.7.30">
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:4.9.0" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-webapp:9.4.31.v20200723" level="project" />
@@ -71,9 +87,25 @@
     <orderEntry type="library" name="Gradle: org.apache.avro:avro:1.9.2" level="project" />
     <orderEntry type="library" name="Gradle: io.confluent:common-utils:6.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.kafka:connect-json:2.7.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.kafka:kafka-clients:2.7.0" level="project" />
+    <orderEntry type="module-library">
+      <library name="Gradle: org.apache.kafka:kafka-clients:2.7.0">
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.7.0/kafka-clients-2.7.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="Gradle: org.rocksdb:rocksdbjni:5.18.4" level="project" />
-    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.2.3" level="project" />
+    <orderEntry type="module-library">
+      <library name="Gradle: ch.qos.logback:logback-core:1.2.3">
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="Gradle: com.squareup.okio:okio:2.8.0" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-servlet:9.4.31.v20200723" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-xml:9.4.31.v20200723" level="project" />
@@ -101,9 +133,33 @@
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-compress:1.19" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.kafka:connect-api:2.7.0" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.5" level="project" />
-    <orderEntry type="library" name="Gradle: com.github.luben:zstd-jni:1.4.5-6" level="project" />
-    <orderEntry type="library" name="Gradle: org.lz4:lz4-java:1.7.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.xerial.snappy:snappy-java:1.1.7.7" level="project" />
+    <orderEntry type="module-library">
+      <library name="Gradle: com.github.luben:zstd-jni:1.4.5-6">
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/com/github/luben/zstd-jni/1.4.5-6/zstd-jni-1.4.5-6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Gradle: org.lz4:lz4-java:1.7.1">
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/lz4/lz4-java/1.7.1/lz4-java-1.7.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Gradle: org.xerial.snappy:snappy-java:1.1.7.7">
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/xerial/snappy/snappy-java/1.1.7.7/snappy-java-1.1.7.7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-security:9.4.31.v20200723" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-util:9.4.31.v20200723" level="project" />

@@ -42,6 +42,10 @@ public class PatientMonitoringTopology {
         TimeWindows tumblingWindow =
                 TimeWindows.of(Duration.ofSeconds(60)).grace(Duration.ofSeconds(5));
 
+        // ** windowed 키로 사용해야 한다. windowedBy 연산자가 KTable을 윈도우 KTable로 변경했 기 때문이다.
+        // 새 KTable 키는 원래 레코드 키뿐만 아니라 윈도우 범위도 포함하는 다중 키다.
+        // 단순하게 원래 키로 그룹핑하면 모든 펄스 이벤트가 동일 하위 그룹(윈도우)에 포함될 수 있으므로,
+        // 하위 그룹(윈도우)으로 레코드들을 그룹핑할 새로운 키가 필요하다는 것은 타당하다.
         KTable<Windowed<String>, Long> pulseCounts =
                 pulseEvents
                         // pulse-events 토픽의 레코드들은 이미 원하는 필드를 사용하고 잇으므로 불필요한 리파티션을 피하기 위해 사용

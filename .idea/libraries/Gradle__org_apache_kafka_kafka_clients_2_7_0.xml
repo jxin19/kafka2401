@@ -2,7 +2,7 @@
   <library name="Gradle: org.apache.kafka:kafka-clients:2.7.0" type="java-imported" external-system-id="GRADLE">
     <properties groupId="org.apache.kafka" artifactId="kafka-clients" version="2.7.0" />
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.7.0/kafka-clients-2.7.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/2.7.0/69f80dc9555d511360af2a282675b5c47176935b/kafka-clients-2.7.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

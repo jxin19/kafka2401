@@ -2,7 +2,7 @@
   <library name="Gradle: com.github.luben:zstd-jni:1.4.5-6" type="java-imported" external-system-id="GRADLE">
     <properties groupId="com.github.luben" artifactId="zstd-jni" version="1.4.5-6" />
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/github/luben/zstd-jni/1.4.5-6/zstd-jni-1.4.5-6.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.luben/zstd-jni/1.4.5-6/3213bb3b3f54644817f422bda3be347eaf4915a7/zstd-jni-1.4.5-6.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

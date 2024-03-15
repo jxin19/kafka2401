@@ -4,3 +4,4 @@ plugins {
 rootProject.name = "kafka2401"
 include("chapter-04")
 include("chapter-05")
+include("chapter-06")
